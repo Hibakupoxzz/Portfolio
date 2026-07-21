@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F2E9;
+  color: #211E19;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  background-image:
+    linear-gradient(to right, rgba(33, 30, 25, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(33, 30, 25, 0.045) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+h1, h2, h3 {
+  font-family: 'Newsreader', ui-serif, Georgia, serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: #A8402A;
+  color: #F5F2E9;
+}
+
+.stamp-rotate {
+  transform: rotate(-4deg);
+}
+
+.text-shadow-none {
+  text-shadow: none;
+}
+
+/* perforated / cut line between metadata cells */
+.cut-line {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #DCD6C3 0px,
+    #DCD6C3 4px,
+    transparent 4px,
+    transparent 9px
+  );
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #A8402A;
+  outline-offset: 3px;
+}
